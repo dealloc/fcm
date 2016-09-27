@@ -1,0 +1,23 @@
+{
+    "name": "dealloc/fcm",
+    "description": "A simple driver for connecting the laravel notification system to Firebase cloud messaging",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2",
+        "illuminate/support": "^5.3",
+        "illuminate/notifications": "^5.3",
+        "illuminate/contracts": "^5.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wannes Gennar",
+            "email": "wannes.gennar@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dealloc\\FCM\\": "src/"
+        }
+    }
+}
