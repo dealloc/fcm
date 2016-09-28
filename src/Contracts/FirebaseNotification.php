@@ -2,6 +2,7 @@
 // Created by dealloc, All rights reserved.
 
 namespace Dealloc\FCM\Contracts;
+use Dealloc\FCM\Messages\FirebaseMessage;
 
 /**
  * Interface FirebaseNotification represents a generic contract to a Firebase Cloud Message.
@@ -10,30 +11,11 @@ namespace Dealloc\FCM\Contracts;
 interface FirebaseNotification
 {
     /**
-     * Get the title of the notification.
+     * Form the notification into the form of a Firebase Cloud Message.
      *
-     * @return string
+     * @param $notifiable
+     * @param FirebaseMessage $message
+     * @return FirebaseMessage
      */
-    public function getTitle();
-
-    /**
-     * Get the body of the notification.
-     *
-     * @return string
-     */
-    public function getBody();
-
-    /**
-     * Get the meta data of the array (data payload)
-     *
-     * @return array
-     */
-    public function getMetadata();
-
-    /**
-     * Get the receivers for this notification.
-     *
-     * @return string|array
-     */
-    public function getTopic();
+    public function toFCM($notifiable, FirebaseMessage $message);
 }
